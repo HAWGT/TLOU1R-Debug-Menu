@@ -27,9 +27,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         CreateThread(nullptr, 0, (LPTHREAD_START_ROUTINE)EnableDebugMenu, hModule, 0, nullptr);
         break;
     case DLL_THREAD_ATTACH:
-        break;
     case DLL_THREAD_DETACH:
-        break;
     case DLL_PROCESS_DETACH:
         break;
     }
