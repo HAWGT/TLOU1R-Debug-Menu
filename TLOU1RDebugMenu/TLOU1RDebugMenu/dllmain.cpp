@@ -7,7 +7,7 @@ void EnableDebugMenu()
 {
     BYTE* Orig_IsReleaseBuild = PatternScan("80 B9 2F 3F 00 00 00");
     if (!Orig_IsReleaseBuild) return;
-    Detour64(Orig_IsReleaseBuild, (BYTE*)&hk_IsReleaseBuild, 16);
+    Detour64(Orig_IsReleaseBuild, (BYTE*)hk_IsReleaseBuild, 16);
 }
 
 char __fastcall hk_IsReleaseBuild(__int64 a1)
